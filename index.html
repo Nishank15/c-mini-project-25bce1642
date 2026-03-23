@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Patient Tracker</h1>
+            <p class="subtitle">Running via WebAssembly (Emscripten) | C Assignment</p>
+        </header>
+
+        <div class="terminal-wrapper">
+            <div class="terminal-header">
+                <div class="window-controls">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="title">main.exe (wasm-terminal)</span>
+            </div>
+            
+            <div class="terminal-window" id="terminal-window">
+                <pre id="output"></pre>
+            </div>
+            
+            <div class="terminal-input-area">
+                <span class="prompt-symbol">~/sys $</span>
+                <input type="text" id="cmd-input" placeholder="Enter input here..." autocomplete="off" autofocus>
+                <button id="enter-btn">ENTER</button>
+                <button id="demo-btn">RUN DEMO</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script async src="main.js"></script>
+</body>
+</html>
